@@ -1,10 +1,11 @@
 import './App.css';
 import BarChart from './components/Charts/BarChart';
+import { salesData } from './data/salesData';
 
 function App() {
 	return (
 		<div className='App'>
-			{/* <BarChart data={[12, 5, 6, 6, 9, 10]} width={700} height={300} /> */}
+			<BarChart data={salesData} />
 		</div>
 	);
 }
