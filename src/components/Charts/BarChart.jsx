@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import * as d3 from 'd3';
 import { useD3 } from '../../hooks/useD3';
 
@@ -62,15 +61,6 @@ const BarChart = ({ data }) => {
 				.attr('width', x.bandwidth())
 				.attr('y', (d) => y1(d.sales))
 				.attr('height', (d) => y1(0) - y1(d.sales));
-			
-			svg
-				.selectAll('text')
-				.data(data)
-				.enter()
-				.append('text')
-				.text((d) => d)
-				.attr('x', (d, i) => i * 70)
-				.attr('y', (d, i) => 300 - 10 * d - 3);
 		},
 		[data.length]
 	);
